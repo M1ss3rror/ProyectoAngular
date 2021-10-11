@@ -1,0 +1,23 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+            <th>Eliminar</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Dariana</td>
+            <td>Gomez</td>
+            <td>dariana.gomez13@gmail.com</td>
+            <th><button class="btn btn-primary btn-dark " type="button" onclick="">Eliminar</button></th>
+            <th><button class="btn btn-primary btn-dark " type="button" onclick="">Editar</button></th>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary btn-dark " [routerLink]="['/crear-clientes']" routerLinkActive="router-link-active" type="button">Crear</button>

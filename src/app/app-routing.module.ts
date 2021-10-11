@@ -9,6 +9,8 @@ import { AutoresComponent} from './components/autores/autores.component'
 import { AliadosComponent } from './components/aliados/aliados.component'
 import { ListarLibrosComponent } from './components/catalogo/listar-libros/listar-libros.component';
 import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-libros.component';
+import { CrearClientesComponent} from './components/clientes/crear-clientes/crear-clientes.component'
+import { ListarClientesComponent} from './components/clientes/listar-clientes/listar-clientes.component'
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: 'aliados', component:AliadosComponent},
   {path: 'listar-libros', component:ListarLibrosComponent},
   {path: 'crear-libros', component:CrearLibrosComponent},
+  {path: 'listar-clientes', component:ListarClientesComponent},
+  {path: 'crear-clientes', component:CrearClientesComponent},
 
   {path: '**', redirectTo:'', pathMatch: 'full'},
 ];

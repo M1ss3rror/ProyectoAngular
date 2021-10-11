@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-8 offset-2">
+        <p class="h1 text-center fw-bold">Crear Cliente</p>
+    </div>
+    <div class="col-6 offset-3">
+        <form class="mt-5" [formGroup]="clienteForm" (ngSubmit)="agregarCliente()">
+            <div class="my-3">
+                <input formControlName="clienteNombre" class="form-control form-control-lg" type="text" placeholder="Nombre">
+                <div *ngIf="clienteForm.get('clienteNombre')?.hasError('required') && clienteForm.get('clienteNombre')?.touched" class="alert alert-danger" role="alert">
+                    El nombre del cliente es obligatorio
+                </div>
+            </div>
+            <div class="my-3">
+                <input formControlName="clienteApellido" class="form-control form-control-lg" type="text" placeholder="Apellido">
+                <div *ngIf="clienteForm.get('clienteApellido')?.hasError('required') && clienteForm.get('clienteApellido')?.touched" class="alert alert-danger" role="alert">
+                    El apellido del cliente es obligatorio
+                </div>
+            </div>
+            <div class="my-3">
+                <input formControlName="clienteCorreo" class="form-control form-control-lg" type="email" placeholder="Correo">
+                <div *ngIf="clienteForm.get('clienteCorreo')?.hasError('required') && clienteForm.get('clienteCorreo')?.touched" class="alert alert-danger" role="alert">
+                    El correo es obligatorio
+                </div>
+                <div *ngIf="clienteForm.get('clienteCorreo')?.hasError('pattern')" class="alert alert-danger" role="alert">
+                    El correo es incorrecto
+                </div>
+            </div>
+            <div class="col-6 offset-3 d-flex justify-content-between align-content-center">
+                <button class="btn btn-light" [routerLink]="['/listar-clientes']" routerLinkActive="router-link-active">Cancelar</button>
+                <button type="submit" class="btn btn-dark" [disabled]="clienteForm.invalid">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -12,6 +12,8 @@ import { AutoresComponent } from './components/autores/autores.component';
 import { AliadosComponent } from './components/aliados/aliados.component';
 import { ListarLibrosComponent } from './components/catalogo/listar-libros/listar-libros.component';
 import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-libros.component';
+import { ListarClientesComponent } from './components/clientes/listar-clientes/listar-clientes.component';
+import { CrearClientesComponent } from './components/clientes/crear-clientes/crear-clientes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-l
     AliadosComponent,
     ListarLibrosComponent,
     CrearLibrosComponent,
+    ListarClientesComponent,
+    CrearClientesComponent,
   ],
   imports: [
     BrowserModule,
