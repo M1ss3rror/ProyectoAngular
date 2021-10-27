@@ -1,0 +1,19 @@
+{
+    "name": "piedradetoqueapi",
+    "version": "1.0.0",
+    "description": "API para la editorial/Fundación Piedra de Toque",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon ."
+    },
+    "author": "Dariana Gomez",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.14"
+    },
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mongoose": "^6.0.11"
+    }
+}

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LanzamientosComponent } from './components/lanzamientos/lanzamientos.component';
@@ -14,6 +15,7 @@ import { ListarLibrosComponent } from './components/catalogo/listar-libros/lista
 import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-libros.component';
 import { ListarClientesComponent } from './components/clientes/listar-clientes/listar-clientes.component';
 import { CrearClientesComponent } from './components/clientes/crear-clientes/crear-clientes.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +29,13 @@ import { CrearClientesComponent } from './components/clientes/crear-clientes/cre
     CrearLibrosComponent,
     ListarClientesComponent,
     CrearClientesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

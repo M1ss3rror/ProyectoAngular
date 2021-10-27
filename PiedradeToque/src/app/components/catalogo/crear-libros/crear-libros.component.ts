@@ -1,7 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { Libro } from 'src/app/models/libro';
 
 @Component({
   selector: 'app-crear-libros',
@@ -25,6 +26,14 @@ export class CrearLibrosComponent implements OnInit {
   }
   agregarLibro(){
     console.warn(this.libroForm)
+    //console.log(this.libroForm.get('libroNombre')?.value);
+    const LIBRO: Libro ={
+      isbn: this.libroForm.get('libroIsbn')?.value,
+      nombre: this.libroForm.get('libroNombre')?.value,
+      autor: this.libroForm.get('libroAutor')?.value,
+      precio: this.libroForm.get('libroPrecio')?.value
+
+    }
     this.router.navigate(['/listar-libros'])
     Swal.fire({
       icon: 'success',

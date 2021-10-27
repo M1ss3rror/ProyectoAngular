@@ -1,3 +1,15 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+    </div>
+</ngx-slick-carousel>
+
+<button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button>
+
+
 <div class="row row-cols-2 row-cols-md-5 row-cols-lg-5 g-4 mt-5 p-3">
     <div class="card" style="width: 18rem;">
         <img src="assets/img/carcel.jpg" class="card-img-top" alt="...">

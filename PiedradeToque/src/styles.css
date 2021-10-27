@@ -39,3 +39,17 @@ a {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.28895308123249297) 0%, rgba(255, 255, 255, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
 }
+
+.slick-slider {
+    width: 88%;
+    margin: auto;
+    background: rgb(14, 13, 13);
+}
+
+body .slick-prev,
+body .slick-next {
+    height: 45px;
+    width: 40px;
+    background: grey !important;
+    z-index: 100;
+}
