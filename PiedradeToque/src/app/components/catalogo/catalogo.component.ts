@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-catalogo',
   templateUrl: './catalogo.component.html',
@@ -7,50 +7,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoComponent implements OnInit {
 
-  constructor() { }
+  title = 'libros';
+
+	customOptions: OwlOptions = {
+		loop: true,
+		mouseDrag: false,
+		touchDrag: false,
+		pullDrag: false,
+		dots: false,
+		navSpeed: 700,
+		autoplay:true,
+    	autoplayTimeout:1000,
+    	autoplayHoverPause:false,
+		navText: ['', ''],
+		responsive: {
+			0: {
+				items: 1
+			},
+			400: {
+				items: 2
+			},
+			740: {
+				items: 3
+			},
+			940: {
+				items: 4
+			}
+		},
+		nav: true
+	}
+
+	slides = [
+		{ id: 1, img: "https://dummyimage.com/350x150/423b42/fff" },
+		{ id: 2, img: "https://dummyimage.com/350x150/2a2b7a/fff" },
+		{ id: 3, img: "https://dummyimage.com/350x150/1a2b7a/fff" },
+		{ id: 4, img: "https://dummyimage.com/350x150/7a2b7a/fff" },
+		{ id: 5, img: "https://dummyimage.com/350x150/9a2b7a/fff" },
+		{ id: 6, img: "https://dummyimage.com/350x150/5a2b7a/fff" },
+		{ id: 6, img: "https://dummyimage.com/350x150/4a2b7a/fff" }
+	];
+
 
   ngOnInit(): void {
   }
 
-}
-
-export class AppComponent {
-
-  slides = [
-    {img: "https://via.placeholder.com/600.png/09f/fff"},
-    {img: "https://via.placeholder.com/600.png/021/fff"},
-    {img: "https://via.placeholder.com/600.png/321/fff"},
-    {img: "https://via.placeholder.com/600.png/422/fff"},
-    {img: "https://via.placeholder.com/600.png/654/fff"}
-  ];
-  slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
-  
-  addSlide() {
-    this.slides.push({img: "http://placehold.it/350x150/777777"})
-  }
-  
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
-  
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-  
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-  
-  afterChange(e) {
-    console.log('afterChange');
-  }
-  
-  beforeChange(e) {
-    console.log('beforeChange');
-  }  
-
-  constructor() { }
-
-  ngOnInit(): void { }
-  
 }

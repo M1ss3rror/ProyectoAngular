@@ -16,8 +16,8 @@
             <td>{{ curso.descripcion }}</td>
             <td>{{ curso.precio }}</td>
 
-            <th><button class="btn btn-primary btn-dark " (click)="eliminarCurso(curso._id)" type="button">Eliminar</button></th>
-            <th><button class="btn btn-primary btn-dark " [routerLink]="['/editar-curso', curso._id]" routerLinkActive="router-link-active" type="button">Editar</button></th>
+            <td><button class="btn btn-primary btn-dark " (click)="eliminarCurso(curso._id)" type="button"><i class="fas fa-trash-alt"></i></button></td>
+            <td><button class="btn btn-primary btn-dark " [routerLink]="['/editar-curso', curso._id]" routerLinkActive="router-link-active" type="button"><i class="fas fa-pen"></i></button></td>
         </tr>
     </tbody>
 </table>

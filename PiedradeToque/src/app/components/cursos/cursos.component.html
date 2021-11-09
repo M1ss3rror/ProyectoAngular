@@ -1,21 +1,96 @@
-<div class="m-0 row">
-    <div class="p-3 col-9">
-        <table class="table table-striped">
-            <tr>
-                <th>Cursos disponibles</th>
-                <th></th>
-                <th>Aplicar</th>
-            </tr>
-            <tr>
-                <td>Básico de Ukelele y/o guitarra</td>
-                <td><img src="assets/img/ukelele.jpg" alt="curso de ukelele" width="600px" /></td>
-                <td><input type="button" value="Aplicar"></td>
-            </tr>
-            <tr>
-                <td>Escritura Creativa</td>
-                <td><img src="assets/img/creacion.jpg" alt="creacion literaria"></td>
-                <td><input type="button" value="Aplicar"></td>
-            </tr>
-        </table>
+<div class="row row-cols-2 row-cols-md-5 row-cols-lg-5 g-4 mt-5 p-3">
+    <div class="card" style="width: 18rem;">
+        <img src="assets\img\escritura.jpg" class="card-img-top h-100" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Escritura creativa</h5>
+            <p class="card-text">Diana Carolina Daza Astrudillo</p>
+            <form>
+                <p class="clasificacion align-center">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+
+                    <label for="radio1">★</label>
+
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+
+                    <label for="radio2">★</label>
+
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+
+                    <label for="radio3">★</label>
+
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+
+                    <label for="radio4">★</label>
+
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+
+                    <label for="radio5">★</label>
+                </p>
+            </form>
+            <button class="btn btn-primary btn-dark mt-3" type="button" onclick="">Inscribirme</button>
+        </div>
     </div>
+    <div class="card" style="width: 18rem;">
+        <img src="assets/img/ukelele-n.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Ukelele Niños</h5>
+            <p class="card-text">Por asignar</p>
+            <form>
+                <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+
+                    <label for="radio1">★</label>
+
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+
+                    <label for="radio2">★</label>
+
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+
+                    <label for="radio3">★</label>
+
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+
+                    <label for="radio4">★</label>
+
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+
+                    <label for="radio5">★</label>
+                </p>
+            </form>
+            <button class="btn btn-primary btn-dark mt-3" type="button" onclick="">Inscribirme</button>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="assets/img/ukelele-a.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Ukelele para adultos</h5>
+            <p class="card-text">Por asignar</p>
+            <form>
+                <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+
+                    <label for="radio1">★</label>
+
+                    <input id="radio2" type="radio" name="estrellas" value="4">
+
+                    <label for="radio2">★</label>
+
+                    <input id="radio3" type="radio" name="estrellas" value="3">
+
+                    <label for="radio3">★</label>
+
+                    <input id="radio4" type="radio" name="estrellas" value="2">
+
+                    <label for="radio4">★</label>
+
+                    <input id="radio5" type="radio" name="estrellas" value="1">
+
+                    <label for="radio5">★</label>
+                </p>
+            </form>
+            <button class="btn btn-primary btn-dark mt-3" type="button" onclick="">Inscribirme</button>
+        </div>
+    </div>
+    <button class="btn btn-primary btn-dark " [routerLink]="['/listar-cursos']" routerLinkActive="router-link-active" type="button">Crear</button>
 </div>

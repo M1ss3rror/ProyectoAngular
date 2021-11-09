@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { CursosComponent } from './components/cursos/cursos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LanzamientosComponent } from './components/lanzamientos/lanzamientos.component';
@@ -16,6 +18,11 @@ import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-l
 import { ListarClientesComponent } from './components/clientes/listar-clientes/listar-clientes.component';
 import { CrearClientesComponent } from './components/clientes/crear-clientes/crear-clientes.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+import{HttpClientModule}from '@angular/common/http';
+import { ListarCursosComponent } from './components/cursos/listar-cursos/listar-cursos.component';
+import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,12 +37,16 @@ import { FooterComponent } from './components/footer/footer.component';
     ListarClientesComponent,
     CrearClientesComponent,
     FooterComponent,
+    ListarCursosComponent,
+    CrearCursoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    SlickCarouselModule
+    HttpClientModule,
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

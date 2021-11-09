@@ -32,24 +32,15 @@ a {
     background-color: #727273 !important;
 }
 
-.carousel-caption {
-    background: rgb(255, 255, 255);
-    background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 0.28895308123249297) 0%, rgba(255, 255, 255, 1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0.28895308123249297) 0%, rgba(255, 255, 255, 1) 100%);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.28895308123249297) 0%, rgba(255, 255, 255, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+button {
+    background-color: #000000 !important;
 }
 
-.slick-slider {
-    width: 88%;
-    margin: auto;
-    background: rgb(14, 13, 13);
+button:hover {
+    background-color: #727273 !important;
 }
 
-body .slick-prev,
-body .slick-next {
-    height: 45px;
-    width: 40px;
-    background: grey !important;
-    z-index: 100;
+th {
+    color: #ffff !important;
+    background-color: #000000 !important;
 }

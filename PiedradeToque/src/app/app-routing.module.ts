@@ -9,8 +9,10 @@ import { AutoresComponent} from './components/autores/autores.component'
 import { AliadosComponent } from './components/aliados/aliados.component'
 import { ListarLibrosComponent } from './components/catalogo/listar-libros/listar-libros.component';
 import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-libros.component';
-import { CrearClientesComponent} from './components/clientes/crear-clientes/crear-clientes.component'
-import { ListarClientesComponent} from './components/clientes/listar-clientes/listar-clientes.component'
+import { CrearClientesComponent} from './components/clientes/crear-clientes/crear-clientes.component';
+import { ListarClientesComponent} from './components/clientes/listar-clientes/listar-clientes.component';
+import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
+import { ListarCursosComponent } from './components/cursos/listar-cursos/listar-cursos.component';
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -22,6 +24,9 @@ const routes: Routes = [
   {path: 'crear-libros', component:CrearLibrosComponent},
   {path: 'listar-clientes', component:ListarClientesComponent},
   {path: 'crear-clientes', component:CrearClientesComponent},
+  {path: 'listar-cursos', component:ListarCursosComponent},
+  {path: 'crear-curso', component:CrearCursoComponent},
+  {path: 'editar-curso/:id', component:CrearCursoComponent},
 
   {path: '**', redirectTo:'', pathMatch: 'full'},
 ];

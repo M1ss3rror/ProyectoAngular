@@ -35,8 +35,8 @@ export class ListarCursosComponent implements OnInit {
       text: "No podrás recuperarlo",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#0000',
-      cancelButtonColor: '#ffff',
+      confirmButtonColor: '#000000',
+      cancelButtonColor: '#727273',
       confirmButtonText: 'Sí, todo bien!'
     }).then((result) => {
       if (result.isConfirmed) {

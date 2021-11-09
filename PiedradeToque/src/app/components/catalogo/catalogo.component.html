@@ -1,40 +1,12 @@
-<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img src="{{ slide.img }}" alt="" width="100%">
-    </div>
-</ngx-slick-carousel>
+<div>
+    <owl-carousel-o [options]="customOptions">
 
-<button (click)="addSlide()">Add</button>
-<button (click)="removeSlide()">Remove</button>
-<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-<button (click)="slickModal.unslick()">unslick</button>
+        <ng-container *ngFor="let slide of slides">
+            <ng-template carouselSlide id="slide.id">
+                <img [src]="slide.img">
+            </ng-template>
+        </ng-container>
 
-
-<div class="row row-cols-2 row-cols-md-5 row-cols-lg-5 g-4 mt-5 p-3">
-    <div class="card" style="width: 18rem;">
-        <img src="assets/img/carcel.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Carcel Profunda</h5>
-            <p class="card-text">Diana Carolina Cabreara Gomez</p>
-            <button class="btn btn-primary btn-dark " type="button" onclick="">Comprar</button>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="assets/img/habitar.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Habitar el relámpago</h5>
-            <p class="card-text">Norman Paba Zarante</p>
-            <button class="btn btn-primary btn-dark " type="button" onclick="">Comprar</button>
-        </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img src="assets/img/prolongacion.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Prolongación de la lluvia</h5>
-            <p class="card-text">Laura Castillo</p>
-            <button class="btn btn-primary btn-dark " type="button" onclick="">Comprar</button>
-        </div>
-    </div>
+    </owl-carousel-o>
     <button class="btn btn-primary btn-dark " [routerLink]="['/listar-libros']" routerLinkActive="router-link-active" type="button">Crear</button>
-
 </div>

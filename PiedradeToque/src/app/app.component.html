@@ -1,14 +1,15 @@
 <nav class="navbar justify-content-center">
-    <a class="navbar-brand d-flex" href="https://www.facebook.com/piedradetoque.poesiaambulante/" target="_blank">
+    <a class="navbar-brand d-flex" [routerLink]="['/inicio']">
         <img class="h-10 w-10" src="assets\img\logo.png" alt="fundacion">
     </a>
+
 </nav>
 <div class="container-fluid">
-    <div class="m-0 row justify-content-start">
+    <div class="mt-3 row justify-content-start">
         <div class="col-3">
             <ul class="nav flex-column p-3 d-flex">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:4200/cursos">Cursos</a>
+                    <a class="nav-link" [routerLink]="['/cursos']">Cursos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://localhost:4200/lanzamientos">Nuevos Lanzamientos</a>
