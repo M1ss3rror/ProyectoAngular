@@ -18,9 +18,6 @@ const libroSchema = mongoose.Schema({
     precio: {
         type: Number,
         required: true
-    },
-    image: {
-        type: String
     }
 })
 

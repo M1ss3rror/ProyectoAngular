@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Libro} from 'src/app/models/libro';
 import{LibroService} from 'src/app/services/libro.service';
+
+
 import Swal from 'sweetalert2'
 
 @Component({
@@ -10,9 +12,10 @@ import Swal from 'sweetalert2'
 })
 export class ListarLibrosComponent implements OnInit {
 
-  listadoLibros : Libro[] = []
+  listadoLibros : Libro[] = [];
 
-  constructor(private _libroService: LibroService) { }
+  constructor(private _libroService: LibroService) {
+  }
 
   ngOnInit(): void {
     this.obtenerLibros();
@@ -30,22 +33,23 @@ export class ListarLibrosComponent implements OnInit {
 
   eliminarLibro(id: any){
     Swal.fire({
-      title: '¿Neta, me lo juras?',
-      text: "No podrás recuperarlo",
+      title: '¿Está seguro?',
+      text: "No podrá recuperarlo",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#000000',
       cancelButtonColor: '#727273',
-      confirmButtonText: 'Sí, todo bien!'
+      confirmButtonText: 'Sí'
     }).then((result) => {
       if (result.isConfirmed) {
         this._libroService.deleteLibro(id).subscribe(data => {
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          'Borrado',
+          'El libro se ha eliminado con exito',
           'success'
         )
-          this.obtenerLibros
+          this.obtenerLibros()
+          
       },error => {
         console.log(error)
       })

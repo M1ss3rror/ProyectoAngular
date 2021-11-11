@@ -8,7 +8,7 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component'
 import { AutoresComponent} from './components/autores/autores.component'
 import { AliadosComponent } from './components/aliados/aliados.component'
 import { ListarLibrosComponent } from './components/catalogo/listar-libros/listar-libros.component';
-import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-libros.component';
+import { CrearLibroComponent } from './components/catalogo/crear-libros/crear-libros.component';
 import { CrearClientesComponent} from './components/clientes/crear-clientes/crear-clientes.component';
 import { ListarClientesComponent} from './components/clientes/listar-clientes/listar-clientes.component';
 import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
@@ -21,7 +21,8 @@ const routes: Routes = [
   {path: 'autores', component:AutoresComponent},
   {path: 'aliados', component:AliadosComponent},
   {path: 'listar-libros', component:ListarLibrosComponent},
-  {path: 'crear-libros', component:CrearLibrosComponent},
+  {path: 'crear-libros', component:CrearLibroComponent},
+  {path: 'editar-libro/:id', component:CrearLibroComponent},
   {path: 'listar-clientes', component:ListarClientesComponent},
   {path: 'crear-clientes', component:CrearClientesComponent},
   {path: 'listar-cursos', component:ListarCursosComponent},

@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
-  selector: 'app-catalogo',
-  templateUrl: './catalogo.component.html',
-  styleUrls: ['./catalogo.component.css']
+selector: 'app-catalogo',
+templateUrl: './catalogo.component.html',
+styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
 
-  title = 'libros';
+title = 'libros';
 
 	customOptions: OwlOptions = {
 		loop: true,
-		mouseDrag: false,
+		mouseDrag: true,
 		touchDrag: false,
 		pullDrag: false,
 		dots: false,
 		navSpeed: 700,
 		autoplay:true,
-    	autoplayTimeout:1000,
+    	autoplayTimeout:3000,
     	autoplayHoverPause:false,
 		navText: ['', ''],
 		responsive: {
@@ -38,17 +38,20 @@ export class CatalogoComponent implements OnInit {
 	}
 
 	slides = [
-		{ id: 1, img: "https://dummyimage.com/350x150/423b42/fff" },
-		{ id: 2, img: "https://dummyimage.com/350x150/2a2b7a/fff" },
-		{ id: 3, img: "https://dummyimage.com/350x150/1a2b7a/fff" },
-		{ id: 4, img: "https://dummyimage.com/350x150/7a2b7a/fff" },
-		{ id: 5, img: "https://dummyimage.com/350x150/9a2b7a/fff" },
-		{ id: 6, img: "https://dummyimage.com/350x150/5a2b7a/fff" },
-		{ id: 6, img: "https://dummyimage.com/350x150/4a2b7a/fff" }
+		{ id: 1, img: "assets/img/carcel.jpg" },
+		{ id: 2, img: "assets/img/habitar.jpg" },
+		{ id: 3, img: "assets/img/prolongacion.jpg" },
+		{ id: 4, img: "assets/img/azul.jpg" },
+		{ id: 5, img: "assets/img/erato.jpg" },
+		{ id: 6, img: "assets/img/flores.jpg" },
+		{ id: 7, img: "assets/img/retablo.jpg" },
+		{ id: 8, img: "assets/img/sobres.jpg" },
+		{ id: 9, img: "assets/img/zalamera.jpg" }
 	];
 
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+
+}
 
 }

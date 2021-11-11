@@ -14,14 +14,15 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { AutoresComponent } from './components/autores/autores.component';
 import { AliadosComponent } from './components/aliados/aliados.component';
 import { ListarLibrosComponent } from './components/catalogo/listar-libros/listar-libros.component';
-import { CrearLibrosComponent } from './components/catalogo/crear-libros/crear-libros.component';
+import { CrearLibroComponent } from './components/catalogo/crear-libros/crear-libros.component';
 import { ListarClientesComponent } from './components/clientes/listar-clientes/listar-clientes.component';
 import { CrearClientesComponent } from './components/clientes/crear-clientes/crear-clientes.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import{HttpClientModule}from '@angular/common/http';
 import { ListarCursosComponent } from './components/cursos/listar-cursos/listar-cursos.component';
-import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component'
+import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
+import { FacebookComponent } from './components/facebook/facebook.component'
 
 @NgModule({
   declarations: [
@@ -33,12 +34,13 @@ import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso
     AutoresComponent,
     AliadosComponent,
     ListarLibrosComponent,
-    CrearLibrosComponent,
+    CrearLibroComponent,
     ListarClientesComponent,
     CrearClientesComponent,
     FooterComponent,
     ListarCursosComponent,
     CrearCursoComponent,
+    FacebookComponent,
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,44 @@ label {
     color: #808080;
 }
 
-.clasificacion {
+
+/* Calificación1 */
+
+.clasificacion1 {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover~label {
+    color: rgba(0, 0, 0, 0.822);
+}
+
+input[type="radio"]:checked~label {
+    color: #000000;
+}
+
+
+/* Calificación2 */
+
+.clasificacion2 {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover~label {
+    color: rgba(0, 0, 0, 0.822);
+}
+
+input[type="radio"]:checked~label {
+    color: #000000;
+}
+
+
+/* Calificación3 */
+
+.clasificacion3 {
     direction: rtl;
     unicode-bidi: bidi-override;
 }

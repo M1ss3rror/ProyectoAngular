@@ -31,22 +31,22 @@ export class ListarCursosComponent implements OnInit {
 
   eliminarCurso(id: any){
     Swal.fire({
-      title: '¿Neta, me lo juras?',
-      text: "No podrás recuperarlo",
+      title: '¿Está seguro?',
+      text: "No podrá recuperarlo",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#000000',
       cancelButtonColor: '#727273',
-      confirmButtonText: 'Sí, todo bien!'
+      confirmButtonText: 'Sí'
     }).then((result) => {
       if (result.isConfirmed) {
         this._cursoService.deleteCurso(id).subscribe(data => {
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          'Borrado',
+          'El curso se ha eliminado con éxito',
           'success'
         )
-          this.obtenerCursos
+          this.obtenerCursos()
       },error => {
         console.log(error)
       })
